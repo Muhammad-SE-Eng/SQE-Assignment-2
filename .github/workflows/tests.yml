@@ -1,0 +1,23 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements.txt
+      - name: Run tests with coverage
+        run: |
+          mkdir -p testing
+          python -m pytest tests/ -v --cov=registration --cov-branch \
+            --cov-report=term-missing --cov-report=xml:testing/coverage.xml \
+            --junitxml=testing/junit.xml | tee testing/pytest_output.txt
+      - name: Upload evidence (kept even when tests legitimately fail)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testing-evidence
+          path: testing/
