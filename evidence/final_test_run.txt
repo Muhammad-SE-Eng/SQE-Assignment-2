@@ -1,0 +1,93 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.7, pytest-9.2.0, pluggy-1.7.0 -- /home/muhammad/Downloads/SQE-Assignment-2/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/muhammad/Downloads/SQE-Assignment-2
+plugins: cov-7.1.0
+collecting ... collected 76 items
+
+tests/test_blackbox.py::test_ecp01_normal_student PASSED                 [  1%]
+tests/test_blackbox.py::test_ecp02_positive_dues PASSED                  [  2%]
+tests/test_blackbox.py::test_ecp03_negative_dues PASSED                  [  3%]
+tests/test_blackbox.py::test_ecp05_all_prerequisites_done PASSED         [  5%]
+tests/test_blackbox.py::test_ecp06_some_prerequisites_done PASSED        [  6%]
+tests/test_blackbox.py::test_ecp07_no_prerequisite_done PASSED           [  7%]
+tests/test_blackbox.py::test_ecp08_already_registered PASSED             [  9%]
+tests/test_blackbox.py::test_ecp10_course_full PASSED                    [ 10%]
+tests/test_blackbox.py::test_ecp11_course_credits_0 PASSED               [ 11%]
+tests/test_blackbox.py::test_ecp12_course_credits_5 PASSED               [ 13%]
+tests/test_blackbox.py::test_ecp13_capacity_0 PASSED                     [ 14%]
+tests/test_blackbox.py::test_ecp14_enrolled_more_than_capacity PASSED    [ 15%]
+tests/test_blackbox.py::test_ecp15_current_credits_19 PASSED             [ 17%]
+tests/test_blackbox.py::test_ecp16_credit_limit_ok PASSED                [ 18%]
+tests/test_blackbox.py::test_ecp18_no_prerequisites_needed PASSED        [ 19%]
+tests/test_blackbox.py::test_ecp20_all_prerequisites_completed PASSED    [ 21%]
+tests/test_blackbox.py::test_ecp21_some_prerequisites_completed PASSED   [ 22%]
+tests/test_blackbox.py::test_ecp22_nothing_completed PASSED              [ 23%]
+tests/test_blackbox.py::test_bva01_0_plus_1 PASSED                       [ 25%]
+tests/test_blackbox.py::test_bva04_0_plus_4 PASSED                       [ 26%]
+tests/test_blackbox.py::test_bva23_14_plus_4_is_18 PASSED                [ 27%]
+tests/test_blackbox.py::test_bva24_17_plus_1_is_18 PASSED                [ 28%]
+tests/test_blackbox.py::test_bva25_15_plus_3_is_18 PASSED                [ 30%]
+tests/test_blackbox.py::test_bva26_18_plus_1_is_19 PASSED                [ 31%]
+tests/test_blackbox.py::test_bva27_15_plus_4_is_19 PASSED                [ 32%]
+tests/test_blackbox.py::test_bva28_16_plus_3_is_19 PASSED                [ 34%]
+tests/test_blackbox.py::test_bva29_current_credits_minus1 PASSED         [ 35%]
+tests/test_blackbox.py::test_bva30_current_credits_19 PASSED             [ 36%]
+tests/test_blackbox.py::test_bva31_course_credits_0 PASSED               [ 38%]
+tests/test_blackbox.py::test_bva32_course_credits_5 PASSED               [ 39%]
+tests/test_blackbox.py::test_bva33_both_credits_wrong_current_checked_first PASSED [ 40%]
+tests/test_blackbox.py::test_bva11_one_seat_left PASSED                  [ 42%]
+tests/test_blackbox.py::test_bva14_enrolled_minus1 PASSED                [ 43%]
+tests/test_blackbox.py::test_bva16_dues_1 PASSED                         [ 44%]
+tests/test_blackbox.py::test_bva18_capacity_1_empty PASSED               [ 46%]
+tests/test_blackbox.py::test_bva21_capacity_1_full PASSED                [ 47%]
+tests/test_blackbox.py::test_bva34_registration_total_18 PASSED          [ 48%]
+tests/test_blackbox.py::test_bva35_registration_total_19 PASSED          [ 50%]
+tests/test_blackbox.py::test_dt01_dues_first PASSED                      [ 51%]
+tests/test_blackbox.py::test_dt02_registered_second PASSED               [ 52%]
+tests/test_blackbox.py::test_dt03_prerequisite_third PASSED              [ 53%]
+tests/test_blackbox.py::test_dt04_credit_fourth PASSED                   [ 55%]
+tests/test_blackbox.py::test_dt07_dues_and_registered PASSED             [ 56%]
+tests/test_blackbox.py::test_dt08_registered_and_prerequisite PASSED     [ 57%]
+tests/test_blackbox.py::test_dt09_prerequisite_and_credit PASSED         [ 59%]
+tests/test_blackbox.py::test_dt10_credit_and_full PASSED                 [ 60%]
+tests/test_blackbox.py::test_dt11_dues_error_before_capacity_error PASSED [ 61%]
+tests/test_blackbox.py::test_decision_does_not_change_anything PASSED    [ 63%]
+tests/test_blackbox.py::test_register_success PASSED                     [ 64%]
+tests/test_blackbox.py::test_waitlist_adds_student PASSED                [ 65%]
+tests/test_blackbox.py::test_waitlist_no_duplicate PASSED                [ 67%]
+tests/test_blackbox.py::test_failed_dues_no_change PASSED                [ 68%]
+tests/test_blackbox.py::test_failed_already_registered_no_change PASSED  [ 69%]
+tests/test_blackbox.py::test_failed_prerequisite_no_change PASSED        [ 71%]
+tests/test_blackbox.py::test_failed_credit_limit_no_change PASSED        [ 72%]
+tests/test_blackbox.py::test_register_twice PASSED                       [ 73%]
+tests/test_blackbox.py::test_withdraw_success PASSED                     [ 75%]
+tests/test_blackbox.py::test_withdraw_not_registered PASSED              [ 76%]
+tests/test_blackbox.py::test_register_then_withdraw PASSED               [ 77%]
+tests/test_whitebox.py::test_wb01_dues_over_1000 PASSED                  [ 78%]
+tests/test_whitebox.py::test_wb02_dues_exactly_1000 PASSED               [ 80%]
+tests/test_whitebox.py::test_wb03_register_other_outcome PASSED          [ 81%]
+tests/test_whitebox.py::test_wb04_check_credit_limit_branches PASSED     [ 82%]
+tests/test_whitebox.py::test_wb05_prerequisites_branches PASSED          [ 84%]
+tests/test_whitebox.py::test_wb06_withdraw_both_branches PASSED          [ 85%]
+tests/test_whitebox.py::test_path1_negative_dues PASSED                  [ 86%]
+tests/test_whitebox.py::test_path2_invalid_enrollment PASSED             [ 88%]
+tests/test_whitebox.py::test_path3_dues_block PASSED                     [ 89%]
+tests/test_whitebox.py::test_path4_already_registered PASSED             [ 90%]
+tests/test_whitebox.py::test_path5_prerequisites_missing PASSED          [ 92%]
+tests/test_whitebox.py::test_path6_credit_limit PASSED                   [ 93%]
+tests/test_whitebox.py::test_path8_registered PASSED                     [ 94%]
+tests/test_whitebox.py::test_mcdc1 PASSED                                [ 96%]
+tests/test_whitebox.py::test_mcdc2 PASSED                                [ 97%]
+tests/test_whitebox.py::test_mcdc3 PASSED                                [ 98%]
+tests/test_whitebox.py::test_mcdc4 PASSED                                [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.7-final-0 ________________
+
+Name              Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------
+registration.py      54      0     26      0   100%
+-------------------------------------------------------------
+TOTAL                54      0     26      0   100%
+============================== 76 passed in 0.06s ==============================
