@@ -69,7 +69,10 @@ s += [P("5. Repository, pull requests and contributions", H1),
       table([["Item","Link / detail"],["Repository","https://github.com/Muhammad-SE-Eng/SQE-Assignment-2"],["PR #1 blackbox-testing","https://github.com/Muhammad-SE-Eng/SQE-Assignment-2/pull/1"],["PR #7 whitebox-testing","https://github.com/Muhammad-SE-Eng/SQE-Assignment-2/pull/7"],
              ["PR #8 defect-fixes","https://github.com/Muhammad-SE-Eng/SQE-Assignment-2/pull/8"],["GitHub Actions: failing run before fixes","See repository Actions tab"],["GitHub Actions: passing run after fixes","See repository Actions tab"]],[6*cm,10*cm]),
       Spacer(1,6),
-      table([["Member","Contribution"],["Contributors","Black-box testing and design; see PR history."],["","White-box testing, CFG and MC/DC; see PR history."],["","Defect fixes and regression testing; see PR history."]],[4*cm,12*cm])]
+      table([["Member","Contribution"],
+             ["Ghulam Muhammad (24P-3116)","Black-box and white-box testing, defect fixes, regression testing and final report."],
+             ["Vinod Kumar (24P-3012)","Group member; collaborative work on the Student Course Registration System."]],
+            [5*cm,11*cm])]
 
 SimpleDocTemplate("docs/testing_report.pdf", pagesize=A4, leftMargin=2*cm, rightMargin=2*cm, topMargin=1.8*cm, bottomMargin=1.8*cm,
                   title="SE3002 Assignment 2 - Testing Report").build(s)
