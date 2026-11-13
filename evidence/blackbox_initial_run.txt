@@ -1,0 +1,128 @@
+.F..F..F........F...FFF..........F.FF.F...F......FFF....F.F              [100%]
+=================================== FAILURES ===================================
+___________________________ test_ecp02_positive_dues ___________________________
+tests/test_blackbox.py:24: in test_ecp02_positive_dues
+    assert registration_decision(s, c) == "DUES_BLOCK"
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+______________________ test_ecp06_some_prerequisites_done ______________________
+tests/test_blackbox.py:46: in test_ecp06_some_prerequisites_done
+    assert registration_decision(s, c) == "PREREQUISITES_MISSING"
+E   AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + REGISTERED
+____________________________ test_ecp10_course_full ____________________________
+tests/test_blackbox.py:65: in test_ecp10_course_full
+    assert registration_decision(s, c) == "WAITLISTED"
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+___________________ test_ecp21_some_prerequisites_completed ____________________
+tests/test_blackbox.py:124: in test_ecp21_some_prerequisites_completed
+    assert prerequisites_satisfied({"CS101"}, {"CS101", "MATH101"}) == False
+E   AssertionError: assert True == False
+E    +  where True = prerequisites_satisfied({'CS101'}, {'CS101', 'MATH101'})
+__________________________ test_bva23_14_plus_4_is_18 __________________________
+tests/test_blackbox.py:142: in test_bva23_14_plus_4_is_18
+    assert check_credit_limit(14, 4) == True
+E   assert False == True
+E    +  where False = check_credit_limit(14, 4)
+__________________________ test_bva24_17_plus_1_is_18 __________________________
+tests/test_blackbox.py:146: in test_bva24_17_plus_1_is_18
+    assert check_credit_limit(17, 1) == True
+E   assert False == True
+E    +  where False = check_credit_limit(17, 1)
+__________________________ test_bva25_15_plus_3_is_18 __________________________
+tests/test_blackbox.py:151: in test_bva25_15_plus_3_is_18
+    assert check_credit_limit(15, 3) == True
+E   assert False == True
+E    +  where False = check_credit_limit(15, 3)
+______________________________ test_bva16_dues_1 _______________________________
+tests/test_blackbox.py:216: in test_bva16_dues_1
+    assert registration_decision(s, c) == "DUES_BLOCK"
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+__________________________ test_bva21_capacity_1_full __________________________
+tests/test_blackbox.py:228: in test_bva21_capacity_1_full
+    assert registration_decision(s, c) == "WAITLISTED"
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+_______________________ test_bva34_registration_total_18 _______________________
+tests/test_blackbox.py:234: in test_bva34_registration_total_18
+    assert registration_decision(s, c) == "REGISTERED"
+E   AssertionError: assert 'CREDIT_LIMIT' == 'REGISTERED'
+E     
+E     - REGISTERED
+E     + CREDIT_LIMIT
+_____________________________ test_dt01_dues_first _____________________________
+tests/test_blackbox.py:248: in test_dt01_dues_first
+    assert registration_decision(s, c) == "DUES_BLOCK"
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_dt07_dues_and_registered _________________________
+tests/test_blackbox.py:272: in test_dt07_dues_and_registered
+    assert registration_decision(s, c) == "DUES_BLOCK"
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+__________________________ test_waitlist_adds_student __________________________
+tests/test_blackbox.py:326: in test_waitlist_adds_student
+    assert result == "WAITLISTED"
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+__________________________ test_waitlist_no_duplicate __________________________
+tests/test_blackbox.py:337: in test_waitlist_no_duplicate
+    assert result == "WAITLISTED"
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+__________________________ test_failed_dues_no_change __________________________
+tests/test_blackbox.py:345: in test_failed_dues_no_change
+    assert result == "DUES_BLOCK"
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+____________________________ test_withdraw_success _____________________________
+tests/test_blackbox.py:395: in test_withdraw_success
+    assert c.enrolled == 9
+E   AssertionError: assert 10 == 9
+E    +  where 10 = Course(code='CS201', credit_hours=3, capacity=30, enrolled=10, prerequisites=set(), waitlist=[]).enrolled
+_________________________ test_register_then_withdraw __________________________
+tests/test_blackbox.py:415: in test_register_then_withdraw
+    assert c.enrolled == 0
+E   AssertionError: assert 1 == 0
+E    +  where 1 = Course(code='CS201', credit_hours=3, capacity=30, enrolled=1, prerequisites=set(), waitlist=[]).enrolled
+=========================== short test summary info ============================
+FAILED tests/test_blackbox.py::test_ecp02_positive_dues - AssertionError: ass...
+FAILED tests/test_blackbox.py::test_ecp06_some_prerequisites_done - Assertion...
+FAILED tests/test_blackbox.py::test_ecp10_course_full - AssertionError: asser...
+FAILED tests/test_blackbox.py::test_ecp21_some_prerequisites_completed - Asse...
+FAILED tests/test_blackbox.py::test_bva23_14_plus_4_is_18 - assert False == True
+FAILED tests/test_blackbox.py::test_bva24_17_plus_1_is_18 - assert False == True
+FAILED tests/test_blackbox.py::test_bva25_15_plus_3_is_18 - assert False == True
+FAILED tests/test_blackbox.py::test_bva16_dues_1 - AssertionError: assert 'RE...
+FAILED tests/test_blackbox.py::test_bva21_capacity_1_full - AssertionError: a...
+FAILED tests/test_blackbox.py::test_bva34_registration_total_18 - AssertionEr...
+FAILED tests/test_blackbox.py::test_dt01_dues_first - AssertionError: assert ...
+FAILED tests/test_blackbox.py::test_dt07_dues_and_registered - AssertionError...
+FAILED tests/test_blackbox.py::test_waitlist_adds_student - AssertionError: a...
+FAILED tests/test_blackbox.py::test_waitlist_no_duplicate - AssertionError: a...
+FAILED tests/test_blackbox.py::test_failed_dues_no_change - AssertionError: a...
+FAILED tests/test_blackbox.py::test_withdraw_success - AssertionError: assert...
+FAILED tests/test_blackbox.py::test_register_then_withdraw - AssertionError: ...
+17 failed, 42 passed in 0.14s
